@@ -1,0 +1,87 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Button",
+"class": "PluginButton",
+"language": "GDScript",
+"path": "res://addons/csgtomeshinstance/plugin_button.gd"
+} ]
+_global_script_class_icons={
+"PluginButton": ""
+}
+
+[application]
+
+config/name="fried rice at jerry's"
+run/main_scene="res://game/maps/warning.tscn"
+boot_splash/show_image=false
+boot_splash/fullsize=false
+boot_splash/use_filter=false
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
+config/icon="res://frajiconnew.png"
+config/quit_on_go_back=false
+
+[autoload]
+
+Res="*res://game/extra scripts/res.gd"
+Nightstatus="*res://game/extra scripts/nightstatus.gd"
+
+[display]
+
+window/size/fullscreen=true
+window/dpi/allow_hidpi=true
+window/vsync/vsync_via_compositor=true
+window/stretch/mode="2d"
+window/stretch/aspect="expand"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/csgtomeshinstance/plugin.cfg", "res://addons/godot_icon/plugin.cfg" )
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[input_devices]
+
+buffering/agile_event_flushing=true
+pointing/emulate_touch_from_mouse=true
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+quality/intended_usage/framebuffer_allocation.mobile=2
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+quality/directional_shadow/size=256
+quality/directional_shadow/size.mobile=256
+quality/shadow_atlas/size=256
+quality/shadow_atlas/size.mobile=256
+quality/shadow_atlas/cubemap_size=64
+quality/shadows/filter_mode=2
+quality/shadows/filter_mode.mobile=2
+quality/reflections/texture_array_reflections=false
+quality/reflections/high_quality_ggx=false
+quality/shading/force_vertex_shading.mobile=false
+quality/shading/force_lambert_over_burley=true
+quality/shading/force_blinn_over_ggx=true
+quality/filters/anisotropic_filter_level=1
+quality/skinning/force_software_skinning=true
+quality/spatial_partitioning/render_tree_balance=1.0
+batching/options/use_multirect=false
+quality/spatial_partitioning/bvh_collision_margin=2.0
+quality/lightmapping/use_bicubic_sampling.mobile=true
+quality/depth/hdr=false
+environment/default_environment="res://default_env.tres"
